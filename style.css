@@ -1,0 +1,401 @@
+#seatbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20000;
+  text-align: left;
+}
+
+.car{
+  border: 1px solid black;
+}
+.statusMessage {
+  display: none;
+  margin: auto;
+  width: 30em;
+  height: 2em;
+  padding: 1.5em;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+body {
+  margin: 30px;
+  font-family: "Georgia", serif;
+  line-height: 1.8em;
+  color: #333;
+}
+ 
+ 
+/* Set the content dimensions */
+ 
+#content {
+  width: 800px;
+  padding: 50px;
+  margin: 0 auto;
+  display: block;
+  font-size: 1.2em;
+  text-align: left;
+}
+ 
+#content h2 {
+  line-height: 1.5em;
+}
+ 
+ 
+/* Add curved borders to various elements */
+ 
+#offerForm, #contactForm, .statusMessage, input[type="submit"], input[type="button"] {
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;  
+  border-radius: 10px;
+}
+ 
+ 
+/* Style for the contact form and status messages */
+ 
+#offerForm, #contactForm, .statusMessage {
+  color: #666;
+  background-color: #ebedf2;
+  background: -webkit-gradient( linear, left bottom, left top, color-stop(0,#dfe1e5), color-stop(1, #ebedf2) );
+  background: -moz-linear-gradient( center bottom, #dfe1e5 0%, #ebedf2 100% );  
+  border: 1px solid #aaa;
+  -moz-box-shadow: 0 0 1em rgba(0, 0, 0, .5);
+  -webkit-box-shadow: 0 0 1em rgba(0, 0, 0, .5);
+  box-shadow: 0 0 1em rgba(0, 0, 0, .5);
+  opacity: .95;
+}
+ 
+ 
+/* The form dimensions */
+ 
+#offerForm, #contactForm {
+  width: 40em;
+  height: 33em;
+  padding: 0 1.5em 1.5em 1.5em;
+  margin: 0 auto;
+  text-align:left;
+}
+ 
+ 
+/* Position the form in the middle of the window (if JavaScript is enabled) */
+ 
+#offerForm.positioned, #contactForm.positioned {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+ 
+ 
+/* Dimensions and position of the status messages */
+ 
+.statusMessage {
+  display: none;
+  margin: auto;
+  width: 30em;
+  height: 2em;
+  padding: 1.5em;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+ 
+.statusMessage p {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+ 
+ 
+/* The header at the top of the form */
+ 
+#contactForm h2 {
+  font-size: 2em;
+  font-style: italic;
+  letter-spacing: .05em;
+  margin: 0 0 1em -.75em;
+  padding: 1em;
+  width: 19.5em;  
+  color: #aeb6aa;
+  background: #dfe0e5 url('images/stamp.jpg') no-repeat 15em -3em; /* http://morguefile.com/archive/display/606433 */
+  border-bottom: 1px solid #aaa;
+  -moz-border-radius: 10px 10px 0 0;
+  -webkit-border-radius: 10px 10px 0 0;  
+  border-radius: 10px 10px 0 0;
+}
+ 
+ 
+/* Give form elements consistent margin, padding and line height */
+ 
+#contactForm ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+ 
+#contactForm ul li {
+  margin: .9em 0 0 0;
+  padding: 0;
+}
+ 
+#contactForm input, #contactForm label {
+  line-height: 1em;
+}
+ 
+#offerForm input, #offerForm label {
+  line-height: 1em;
+}
+ 
+/* The field labels */
+ 
+label {
+  display: block;
+  float: left;
+  clear: left;
+  text-align: right;
+  width: 28%;
+  padding: .4em 0 0 0;
+  margin: .15em .5em 0 0;
+  font-weight: bold;
+}
+ 
+ 
+/* The fields */
+ 
+input, textarea {
+  display: block;
+  margin: 0;
+  padding: .4em;
+  width: 67%;
+  font-family: "Georgia", serif;
+  font-size: 1em;
+  border: 1px solid #aaa;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;    
+  border-radius: 5px;
+  -moz-box-shadow: rgba(0,0,0,.2) 0 1px 4px inset;
+  -webkit-box-shadow: rgba(0,0,0,.2) 0 1px 4px inset;
+  box-shadow: rgba(0,0,0,.2) 0 1px 4px inset;
+  background: #fff;
+}
+ 
+textarea {
+  height: 13em;
+  line-height: 1.5em;
+  resize: none;
+}
+ 
+ 
+/* Place a border around focused fields, and hide the inner shadow */
+ 
+#contactForm *:focus {
+  border: 1px solid #66f;
+  outline: none;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+}
+ 
+ 
+/* Display correctly filled-in fields with a green background */
+ 
+input:valid, textarea:valid {
+  background: #dfd;
+}
+ 
+ 
+/* The Send and Cancel buttons */
+ 
+input[type="submit"], input[type="button"] {
+  float: right;
+  margin: -10em 1em 0 1em;
+  width: 10em;
+  padding: .5em;
+  border: 1px solid #666;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;  
+  border-radius: 10px;
+  -moz-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+  -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+  box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+  color: #fff;
+  background: #0a0;
+  font-size: 1em;
+  line-height: 1em;
+  font-weight: bold;
+  opacity: .7;
+  -webkit-appearance: none;
+  -moz-transition: opacity .5s;
+  -webkit-transition: opacity .5s;
+  -o-transition: opacity .5s;
+  transition: opacity .5s;
+}
+ 
+input[type="submit"]:hover,
+input[type="submit"]:active,
+input[type="button"]:hover,
+input[type="button"]:active {
+  cursor: pointer;
+  opacity: 1;
+}
+ 
+input[type="submit"]:active, input[type="button"]:active {
+  color: #333;
+  background: #eee;
+  -moz-box-shadow: 0 0 .5em rgba(0, 0, 0, .8) inset;
+  -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8) inset;
+  box-shadow: 0 0 .5em rgba(0, 0, 0, .8) inset;
+}
+ 
+input[type="button"] {
+  background: #f33;
+}
+ 
+ 
+/* Header/footer boxes */
+ 
+.wideBox {
+  clear: both;
+  text-align: center;
+  margin: 70px;
+  padding: 10px;
+  background: #ebedf2;
+  border: 1px solid #333;
+}
+ 
+.wideBox h1 {
+  font-weight: bold;
+  margin: 20px;
+  color: #666;
+  font-size: 1.5em;
+}
+ 
+</style>
+ 
+<!-- Some IE7 hacks and workarounds -->
+ 
+<!--[if lt IE 8]>
+<style>
+ 
+/* IE7 needs the fields to be floated as well as the labels */
+ 
+input, textarea {
+  float: right;
+}
+ 
+#formButtons {
+  clear: both;
+}
+ 
+/*
+  IE7 needs an ickier approach to vertical/horizontal centring with fixed positioning.
+  The negative margins are half the element's width/height.
+*/
+ 
+#offerForm.positioned, #contactForm.positioned, .statusMessage {
+  left: 50%;
+  top: 50%;
+}
+ 
+#contactForm.positioned {
+  margin-left: -20em;
+  margin-top: -16.5em;
+}
+#offerForm.positioned {
+  margin-left: -20em;
+  margin-top: -16.5em;
+}
+ 
+.statusMessage {
+  margin-left: -15em;
+  margin-top: -1em;
+}
+.showOfferForm {
+ display: block;
+ float: center;
+ background: #EEE;
+ border: 1px solid gray;
+ margin: 2px 2px 2px 2px;
+ padding: 2px;
+ width: 10em;
+ text-align: center;
+ font-size: 1.em;
+ font-weight: bold;
+ border-radius: 10px;
+ -moz-border-radius: 10px;
+ -webkit-border-radius: 10px;
+ box-shadow: 0 0 .3em rgba(0,0,0,.3);
+ -moz-box-shadow: 0 0 .3em rgba(0,0,0,.3);
+ -webkit-box-shadow: 0 0 .3em rgba(0,0,0,.3);
+
+}
+
+#offerForm input[type="submit"], #offerForm input[type="button"] {
+  float: right;
+  margin: 3em 1em 0 1em;
+}
+
+#offerForm2 {
+
+  text-align:left;
+}
+
+#offerForm2 input[type="submit"], #offerForm2 input[type="button"] {
+  float: right;
+  margin: 3em 1em 0 1em;
+}
+
+.container {
+ background: white;
+ border: 1px solid gray;
+ margin: 10px 10px 10px 10px;
+ padding: 10px;
+ text-align: center;
+ font-size: 0.9em;
+ border-radius: 10px;
+ -moz-border-radius: 10px;
+ -webkit-border-radius: 10px;
+
+}
+
+/* css for timepicker */
+.ui-timepicker-div .ui-widget-header{ margin-bottom: 8px; }
+.ui-timepicker-div dl{ text-align: left; }
+.ui-timepicker-div dl dt{ height: 25px; }
+.ui-timepicker-div dl dd{ margin: -25px 0 10px 65px; }
+.ui-timepicker-div td { font-size: 90%; }
+.bgimg {
+	position:fixed;
+	right:0px;
+	top:0px;
+	z-index:0;
+	opacity:0.4;
+	filter:alpha(opacity=40); /* For IE8 and earlier */
+}
+/* Z-index of #mask must lower than #boxes .window */
+#mask {
+  height:100%,
+  width:100%;
+  position:absolute;
+  z-index:9000;
+  opacity:0.2;
+  filter:alpha(opacity=20); /* For IE8 and earlier */
+  display:none;
+}
+
+.window {
+  position:absolute;
+  width:440px;
+  height:200px;
+  display:none;
+  z-index:9999;
+  padding:20px;
+}
