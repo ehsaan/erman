@@ -18,6 +18,7 @@
 */
 session_name("sharedride");
 session_start();
+include_once("config.php");
 
 if (!isset($_SESSION['validated']) || $_SESSION['validated']!=1)
 {
@@ -258,12 +259,11 @@ cnt2++;
 	$output.="<div ><a rel=\"license\" href=\"http://www.gnu.org/licenses/gpl.txt\"><img alt=\"GNU Public License v3.0\" style=\"border-width:0\" src=\"images/gplv3-88x31.png\" /></a><br />by <a href=\"http://www.utdallas.edu/~ehsaan/\">Ehsan Nourbakhsh</a> </a></div>\n";
 		$output.="</div>\n";
 		$output.="<div id=\"content\">\n";
-
-	$link = mysql_connect('dslabcomp', 'ehsansr','t3xAKeQaAdTq8z9X');
+	$link = mysql_connect($db_host,$db_username,$db_password);
 	if (!$link) {
     		die('Could not connect: ' . mysql_error());
 	}
-	mysql_select_db('ehsansr');
+	mysql_select_db($db_database);
 ############## set USER ID or insert new user
 	$query = "SELECT personid FROM persons WHERE email='".$_SESSION['email']."';";
 	$result=mysql_query($query) or die (mysql_error());;
